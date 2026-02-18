@@ -3,74 +3,108 @@
 <head>
   <title>Quotation</title>
   <link rel="stylesheet" href="/static_quote/styles.css?v=999">
-
 </head>
-<body>
+<body data-company='{{ (deal.company_name if deal.company_name is defined else deal.get("company_name","")) | tojson }}'
+  data-deal='{{ (deal.deal_id if deal.deal_id is defined else deal.get("deal_id","")) | tojson }}'>
+
   <div class="container">
     <div class="topbar">
       <a class="link" href="/quote">➕ New Deal</a>
-      <a class="btn-outline" href="/quote/insights/{{deal.deal_id}}">View Insights ✨</a>
+      <a class="btn-outline" href="/quote/insights/{{ (deal.deal_id if deal.deal_id is defined else deal.get('deal_id','')) }}">View Insights ✨</a>
     </div>
 
     <div class="card">
       <h2>📄 Quotation</h2>
-      <p><b>Deal:</b> {{deal.deal_id}} &nbsp; | &nbsp; <b>Company:</b> {{deal.company_name}}</p>
+
+      <p>
+        <b>Deal:</b> {{ deal.deal_id if deal.deal_id is defined else deal.get('deal_id','') }}
+        &nbsp; | &nbsp;
+        <b>Company:</b> {{ deal.company_name if deal.company_name is defined else deal.get('company_name','') }}
+      </p>
+
+      {# ✅ SAFE: get priced items regardless of whether deal is object or dict #}
+      {% set items = deal.priced_items if deal.priced_items is defined else (deal.get('priced_items', []) if deal is mapping else []) %}
 
       <table>
         <thead>
-          <tr><th>Product</th><th>Qty</th><th>Estimated Unit Price</th><th>Actions</th></tr>
+          <tr>
+            <th>Product</th>
+            <th>Qty</th>
+            <th>Estimated Unit Price</th>
+            <th>Actions</th>
+          </tr>
         </thead>
+
         <tbody>
-          {% for item in deal.priced_items %}
-          <tr data-product="{{item.product}}">
-            <td>{{item.product}}</td>
-            <td><span class="qty" data-product="{{item.product}}">1</span></td>
-            <td>₹ <span class="unit" data-product="{{item.product}}">{{'%.2f'|format(item.unit_price)}}</span></td>
+          {% for item in items %}
+          {# item could be dict or object #}
+          {% set product_name = item.product if item.product is defined else item.get('product','') %}
+          {% set unit_price = item.unit_price if item.unit_price is defined else item.get('unit_price',0) %}
+
+          <tr data-product="{{ product_name }}">
+            <td class="prod-cell">
+              {{ product_name }}
+
+              <!-- ✅ small view icon -->
+              <button class="icon-btn"
+                      type="button"
+                      onclick="openProductView('{{ product_name | tojson }}')"
+                      title="View">
+                👁️
+              </button>
+            </td>
+
             <td>
-              <button class="mini" type="button" onclick="dec('{{item.product}}')">−</button>
-              <button class="mini" type="button" onclick="inc('{{item.product}}')">+</button>
-              <button class="mini danger" type="button" onclick="removeProd('{{item.product}}')">🗑</button>
+              <span class="qty" data-product="{{ product_name }}">1</span>
+            </td>
+
+            <td>
+              ₹ <span class="unit" data-product="{{ product_name }}">{{ '%.2f'|format(unit_price) }}</span>
+            </td>
+
+            <td>
+              <button class="mini" type="button" onclick='dec({{ product_name | tojson }})'>−</button>
+              <button class="mini" type="button" onclick='inc({{ product_name | tojson }})'>+</button>
+              <button class="mini danger" type="button" onclick='removeProd({{ product_name | tojson }})'>🗑</button>
             </td>
           </tr>
           {% endfor %}
         </tbody>
       </table>
-<button class="icon-btn" onclick="openProductView('{{ p.product_name }}')" title="View">
-  👁️
-</button>
 
-<div id="productModal" class="modal hidden">
-  <div class="modal-card">
-    <button class="modal-close" onclick="closeProductView()">✕</button>
+      <!-- ✅ modal (outside loop) -->
+      <div id="productModal" class="modal hidden">
+        <div class="modal-card">
+          <button class="modal-close" type="button" onclick="closeProductView()">✕</button>
 
-    <h3 id="pm_name"></h3>
-    <p><b>Product ID:</b> <span id="pm_id"></span></p>
+          <h3 id="pm_name"></h3>
+          <p><b>Product ID:</b> <span id="pm_id"></span></p>
 
-    <h4>Pros</h4>
-    <div id="pm_pros" class="chipbox"></div>
+          <h4>Pros</h4>
+          <div id="pm_pros" class="chipbox"></div>
 
-    <h4>Cons</h4>
-    <div id="pm_cons" class="chipbox"></div>
+          <h4>Cons</h4>
+          <div id="pm_cons" class="chipbox"></div>
 
-    <h4>Graph</h4>
-    <div class="graph-placeholder">[Graph will be added by team]</div>
+          <h4>Graph</h4>
+          <div class="graph-placeholder">[Graph will be added by team]</div>
 
-    <h4>Why buy this?</h4>
-    <div id="pm_reason" class="reason-box"></div>
-  </div>
-</div>
+          <h4>Why buy this?</h4>
+          <div id="pm_reason" class="reason-box"></div>
+        </div>
+      </div>
 
-
+      {% set total = deal.total_price if deal.total_price is defined else (deal.get('total_price',0) if deal is mapping else 0) %}
       <div class="total" id="totalBox">
-        Total: ₹ <span id="totalVal">{{'%.2f'|format(deal.total_price)}}</span>
+        Total: ₹ <span id="totalVal">{{ '%.2f'|format(total) }}</span>
       </div>
     </div>
   </div>
 
 <script>
-  // Maintain a qty map for each product row
-  const companyName = "{{deal.company_name}}";
-  const dealId = "{{deal.deal_id}}";
+  const companyName = JSON.parse(document.body.dataset.company);
+  const dealId = JSON.parse(document.body.dataset.deal);
+
 
   function collectProductsExpanded(){
     const rows = document.querySelectorAll("tbody tr[data-product]");
@@ -94,9 +128,9 @@
     const res = await fetch("/quote/reprice", { method:"POST", body: fd });
     const out = await res.json();
 
-    // Update unit prices (1 per product name) - use first match
     (out.priced_items || []).forEach(it => {
-      const unitEls = document.querySelectorAll(`.unit[data-product="${CSS.escape(it.product)}"]`);
+      const p = it.product;
+      const unitEls = document.querySelectorAll(`.unit[data-product="${CSS.escape(p)}"]`);
       unitEls.forEach(el => el.innerText = (it.unit_price || 0).toFixed(2));
     });
 
@@ -122,7 +156,30 @@
     if(row) row.remove();
     reprice();
   }
-</script>
 
+  async function openProductView(productName){
+    const res = await fetch("/quote/product/view", {
+      method: "POST",
+      headers: {"Content-Type":"application/json"},
+      body: JSON.stringify({ product_name: productName })
+    });
+    const data = await res.json();
+
+    document.getElementById("pm_name").textContent = data.product_name || productName;
+    document.getElementById("pm_id").textContent = data.product_id || "TBD";
+
+    document.getElementById("pm_pros").innerHTML = (data.pros || [])
+      .map(x => `<span class="chip">${x}</span>`).join("");
+    document.getElementById("pm_cons").innerHTML = (data.cons || [])
+      .map(x => `<span class="chip">${x}</span>`).join("");
+
+    document.getElementById("pm_reason").textContent = data.reason_to_buy || "";
+    document.getElementById("productModal").classList.remove("hidden");
+  }
+
+  function closeProductView(){
+    document.getElementById("productModal").classList.add("hidden");
+  }
+</script>
 </body>
 </html>
