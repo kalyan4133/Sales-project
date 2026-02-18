@@ -35,6 +35,31 @@
           {% endfor %}
         </tbody>
       </table>
+<button class="icon-btn" onclick="openProductView('{{ p.product_name }}')" title="View">
+  👁️
+</button>
+
+<div id="productModal" class="modal hidden">
+  <div class="modal-card">
+    <button class="modal-close" onclick="closeProductView()">✕</button>
+
+    <h3 id="pm_name"></h3>
+    <p><b>Product ID:</b> <span id="pm_id"></span></p>
+
+    <h4>Pros</h4>
+    <div id="pm_pros" class="chipbox"></div>
+
+    <h4>Cons</h4>
+    <div id="pm_cons" class="chipbox"></div>
+
+    <h4>Graph</h4>
+    <div class="graph-placeholder">[Graph will be added by team]</div>
+
+    <h4>Why buy this?</h4>
+    <div id="pm_reason" class="reason-box"></div>
+  </div>
+</div>
+
 
       <div class="total" id="totalBox">
         Total: ₹ <span id="totalVal">{{'%.2f'|format(deal.total_price)}}</span>

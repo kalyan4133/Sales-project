@@ -111,3 +111,27 @@ submitBtn?.addEventListener("click", async () => {
     if (submitSpinner) submitSpinner.classList.add("hidden");
   }
 });
+
+async function openProductView(productName) {
+  const res = await fetch("/quote/product/view", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({ product_name: productName })
+  });
+
+  const data = await res.json();
+
+  document.getElementById("pm_name").textContent = data.product_name;
+  document.getElementById("pm_id").textContent = data.product_id;
+
+  document.getElementById("pm_pros").innerHTML = (data.pros || []).map(x => `<span class="chip">${x}</span>`).join("");
+  document.getElementById("pm_cons").innerHTML = (data.cons || []).map(x => `<span class="chip">${x}</span>`).join("");
+
+  document.getElementById("pm_reason").textContent = data.reason_to_buy || "";
+
+  document.getElementById("productModal").classList.remove("hidden");
+}
+
+function closeProductView() {
+  document.getElementById("productModal").classList.add("hidden");
+}

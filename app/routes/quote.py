@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 from fastapi import APIRouter, Request, Form
+from pydantic import BaseModel
+import pandas as pd
 from fastapi.responses import HTMLResponse, JSONResponse
 from fastapi.templating import Jinja2Templates
 import json
@@ -13,6 +15,9 @@ templates = Jinja2Templates(directory="templates_quote")
 
 # shared in-memory store for demo
 DEALS: dict[str, dict] = {}
+
+class ProductViewRequest(BaseModel):
+    product_name: str
 
 @router.get("", response_class=HTMLResponse)
 def new_deal(
@@ -103,3 +108,35 @@ def insights(request: Request, deal_id: str):
         "request": request,
         "deal": deal
     })
+
+@router.post("/quote/product/view")
+def view_product(req: ProductViewRequest):
+    # Read from your dataset (example: product_history.csv/xlsx)
+    data_dir = Path("data")
+    csv_path = data_dir / "product_history.csv"
+    xlsx_path = data_dir / "product_history.xlsx"
+
+    df = None
+    if csv_path.exists():
+        df = pd.read_csv(csv_path)
+    elif xlsx_path.exists():
+        df = pd.read_excel(xlsx_path)
+
+    product_id = None
+    if df is not None and "product_name" in df.columns:
+        hit = df[df["product_name"].astype(str).str.lower() == req.product_name.lower()]
+        if not hit.empty:
+            # adapt column name if your dataset uses different key
+            for col in ["product_id", "id", "sku", "Product ID"]:
+                if col in hit.columns:
+                    product_id = str(hit.iloc[0][col])
+                    break
+
+    return {
+        "product_name": req.product_name,
+        "product_id": product_id or "TBD",
+        "pros": [],
+        "cons": [],
+        "graph": {"labels": [], "values": []},
+        "reason_to_buy": ""
+    }
