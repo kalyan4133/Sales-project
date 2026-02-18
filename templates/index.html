@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sales Requirements Agent</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- ✅ Correct CSS path for FastAPI static mount -->
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+
+<body>
+  <div class="page">
+    <header class="header">
+      <div class="brand">
+        <div class="logo">SR</div>
+        <div>
+          <div class="title">Sales Requirements Agent</div>
+          <div class="subtitle">Paste notes or upload a file → Submit → View structured output ✅</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ✅ No <form> tag (prevents accidental page refresh submission) -->
+    <main class="card">
+      <h2>Input</h2>
+
+      <label class="label" for="company">Company Name (optional)</label>
+      <input id="company" class="input" type="text" placeholder="e.g., NovaGen Therapeutics" />
+
+      <label class="label" for="text">Paste sales rep notes / customer request</label>
+      <textarea id="text" class="textarea" placeholder="Type or paste the customer requirement notes here..."></textarea>
+
+      <label class="label" for="file">Upload document (optional)</label>
+      <form id="uploadForm" enctype="multipart/form-data">
+        <input type="file" name="file" id="file" />
+      </form>
+
+
+      <div class="hint">
+        Supported: TXT (and any text-like file). PDF/DOCX can be added later.
+      </div>
+
+      <div class="actions">
+        <!-- ✅ IMPORTANT: type="button" so it does NOT submit a form -->
+        <button id="submitBtn" class="btn primary" type="button">
+          <span id="submitText">Submit ➜</span>
+          <span id="submitSpinner" class="spinner hidden" aria-label="loading"></span>
+        </button>
+        <button id="clearBtn" class="btn ghost" type="button">Clear</button>
+      </div>
+
+      <!-- ✅ Message area for errors/success -->
+      <div id="msg" class="msg"></div>
+
+      <!-- ✅ Small debug links -->
+      <div class="footer">
+        <span>API: <code>/analyze/text</code> | <code>/analyze/file</code></span>
+        <span class="dot">•</span>
+        <a class="btn ghost" href="/docs" style="padding:6px 10px; border-radius:12px;">Open API Docs</a>
+      </div>
+    </main>
+  </div>
+
+  <!-- ✅ Correct JS path -->
+  <script src="/static/app.js"></script>
+
+  <!-- ✅ If JS fails to load, show it immediately -->
+  <noscript>
+    <div class="page">
+      <div class="card">
+        <h2>JavaScript is disabled</h2>
+        <p>Please enable JavaScript to use this UI.</p>
+      </div>
+    </div>
+  </noscript>
+</body>
+</html>

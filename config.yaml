@@ -1,0 +1,13 @@
+llm:
+  provider: gemini
+  model: gemini-3-flash-preview
+  temperature: 0.2
+  max_tokens: 500
+
+retrieval:
+  catalog_top_k: 5
+  history_top_k: 5
+  tfidf_max_features: 20000
+api:
+  host: 0.0.0.0
+  port: 8000

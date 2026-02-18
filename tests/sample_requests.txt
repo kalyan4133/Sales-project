@@ -1,0 +1,4 @@
+# Example request (text)
+curl -X POST "http://127.0.0.1:8000/analyze/text" ^
+  -H "Content-Type: application/json" ^
+  -d "{\"text\":\"Client: MedGenome Labs needs plasmid prep for transfection. Wants high purity, low endotoxin, and quick quantification in micro-volume. Delivery in 2 weeks.\",\"structured\":{\"company_name\":\"MedGenome Labs\"}}"

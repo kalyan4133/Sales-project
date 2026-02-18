@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>New Deal</title>
+  <link rel="stylesheet" href="/static_quote/styles.css?v=999">
+
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🚀 New Deal</h1>
+      <div class="pill">Agent-driven Quote Automation</div>
+    </div>
+
+    <form class="card" id="dealForm" action="/quote/generate-quote" method="post">
+      <label>Deal ID</label>
+      <input name="deal_id" placeholder="D0123" value="{{ prefill.deal_id }}" required>
+
+      <label>Company Name</label>
+      <input name="company_name" placeholder="Apollo Hospitals" value="{{ prefill.company_name }}" required>
+
+      <label>Products</label>
+      <div class="hint" style="margin-top:-6px;">Edit the list before generating the quote.</div>
+
+      <div id="prodList" class="prod-list"></div>
+
+      <div class="prod-add">
+        <input id="prodInput" type="text" placeholder="Add a product (e.g., ELISA Kits)" />
+        <button class="mini" type="button" onclick="addProduct()">Add</button>
+      </div>
+
+      <!-- Backward compatible field (server can read either) -->
+      <input type="hidden" name="products" id="products" value="{{ prefill.products }}" />
+      <input type="hidden" name="products_json" id="products_json" value='{{ prefill.products_json }}' />
+
+      <button class="btn" type="submit">Generate Quote ➜</button>
+
+      {% if error %}
+        <div class="error-box">{{ error }}</div>
+      {% endif %}
+    </form>
+  </div>
+
+  <script>
+    // Build product list from prefill.products_json (preferred) or prefill.products
+    let products = [];
+    const rawJson = (document.getElementById('products_json')?.value || '').trim();
+    const raw = (document.getElementById('products')?.value || '').trim();
+
+    try {
+      if (rawJson && rawJson.startsWith('[')) products = JSON.parse(rawJson);
+    } catch(e) {}
+    if (!Array.isArray(products) || products.length === 0) {
+      products = raw ? raw.split(/,|\n/).map(s => s.trim()).filter(Boolean) : [];
+    }
+
+    function syncHidden(){
+      document.getElementById('products_json').value = JSON.stringify(products);
+      document.getElementById('products').value = products.join(', ');
+    }
+
+    function render(){
+      const list = document.getElementById('prodList');
+      list.innerHTML = '';
+      if (!products.length) {
+        list.innerHTML = '<div class="muted">No products yet. Add at least one product.</div>';
+        syncHidden();
+        return;
+      }
+      products.forEach((p, idx) => {
+        const row = document.createElement('div');
+        row.className = 'prod-row';
+        row.innerHTML = `
+          <div class="prod-name">${p}</div>
+          <div class="prod-actions">
+            <button class="mini danger" type="button" onclick="removeProduct(${idx})">🗑</button>
+          </div>
+        `;
+        list.appendChild(row);
+      });
+      syncHidden();
+    }
+
+    function addProduct(){
+      const el = document.getElementById('prodInput');
+      const val = (el.value || '').trim();
+      if (!val) return;
+      products.push(val);
+      el.value = '';
+      render();
+    }
+
+    function removeProduct(i){
+      products.splice(i, 1);
+      render();
+    }
+
+    // expose functions
+    window.addProduct = addProduct;
+    window.removeProduct = removeProduct;
+
+    // initial render
+    render();
+
+    // prevent submit with empty product list
+    document.getElementById('dealForm').addEventListener('submit', (e) => {
+      if (!products.length) {
+        e.preventDefault();
+        alert('Please add at least one product before generating quote.');
+      }
+      syncHidden();
+    });
+  </script>
+</body>
+</html>

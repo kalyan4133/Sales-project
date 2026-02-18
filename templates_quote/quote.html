@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quotation</title>
+  <link rel="stylesheet" href="/static_quote/styles.css?v=999">
+
+</head>
+<body>
+  <div class="container">
+    <div class="topbar">
+      <a class="link" href="/quote">➕ New Deal</a>
+      <a class="btn-outline" href="/quote/insights/{{deal.deal_id}}">View Insights ✨</a>
+    </div>
+
+    <div class="card">
+      <h2>📄 Quotation</h2>
+      <p><b>Deal:</b> {{deal.deal_id}} &nbsp; | &nbsp; <b>Company:</b> {{deal.company_name}}</p>
+
+      <table>
+        <thead>
+          <tr><th>Product</th><th>Qty</th><th>Estimated Unit Price</th><th>Actions</th></tr>
+        </thead>
+        <tbody>
+          {% for item in deal.priced_items %}
+          <tr data-product="{{item.product}}">
+            <td>{{item.product}}</td>
+            <td><span class="qty" data-product="{{item.product}}">1</span></td>
+            <td>₹ <span class="unit" data-product="{{item.product}}">{{'%.2f'|format(item.unit_price)}}</span></td>
+            <td>
+              <button class="mini" type="button" onclick="dec('{{item.product}}')">−</button>
+              <button class="mini" type="button" onclick="inc('{{item.product}}')">+</button>
+              <button class="mini danger" type="button" onclick="removeProd('{{item.product}}')">🗑</button>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+      <div class="total" id="totalBox">
+        Total: ₹ <span id="totalVal">{{'%.2f'|format(deal.total_price)}}</span>
+      </div>
+    </div>
+  </div>
+
+<script>
+  // Maintain a qty map for each product row
+  const companyName = "{{deal.company_name}}";
+  const dealId = "{{deal.deal_id}}";
+
+  function collectProductsExpanded(){
+    const rows = document.querySelectorAll("tbody tr[data-product]");
+    const list = [];
+    rows.forEach(r => {
+      const p = r.getAttribute("data-product");
+      const qtyEl = r.querySelector(".qty");
+      const q = parseInt(qtyEl?.innerText || "1", 10) || 1;
+      for(let i=0;i<q;i++) list.push(p);
+    });
+    return list;
+  }
+
+  async function reprice(){
+    const productsExpanded = collectProductsExpanded();
+    const fd = new FormData();
+    fd.append("deal_id", dealId);
+    fd.append("company_name", companyName);
+    fd.append("products_json", JSON.stringify(productsExpanded));
+
+    const res = await fetch("/quote/reprice", { method:"POST", body: fd });
+    const out = await res.json();
+
+    // Update unit prices (1 per product name) - use first match
+    (out.priced_items || []).forEach(it => {
+      const unitEls = document.querySelectorAll(`.unit[data-product="${CSS.escape(it.product)}"]`);
+      unitEls.forEach(el => el.innerText = (it.unit_price || 0).toFixed(2));
+    });
+
+    document.getElementById("totalVal").innerText = (out.total_price || 0).toFixed(2);
+  }
+
+  function inc(p){
+    const qtyEl = document.querySelector(`.qty[data-product="${CSS.escape(p)}"]`);
+    if(!qtyEl) return;
+    qtyEl.innerText = (parseInt(qtyEl.innerText, 10) || 1) + 1;
+    reprice();
+  }
+
+  function dec(p){
+    const qtyEl = document.querySelector(`.qty[data-product="${CSS.escape(p)}"]`);
+    if(!qtyEl) return;
+    qtyEl.innerText = Math.max(1, (parseInt(qtyEl.innerText, 10) || 1) - 1);
+    reprice();
+  }
+
+  function removeProd(p){
+    const row = document.querySelector(`tr[data-product="${CSS.escape(p)}"]`);
+    if(row) row.remove();
+    reprice();
+  }
+</script>
+
+</body>
+</html>

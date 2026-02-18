@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Insights</title>
+  <link rel="stylesheet" href="/static_quote/styles.css?v=999">
+
+</head>
+<body>
+  <div class="container">
+    <div class="topbar">
+      <a class="link" href="/quote">➕ New Deal</a>
+      <a class="link" href="javascript:history.back()">← Back to Quote</a>
+    </div>
+
+    <div class="insights-grid">
+
+      <!-- LEFT COLUMN -->
+      <div class="left-col">
+
+        <!-- Market Competition Card -->
+        <div class="ins-card">
+          <div class="ins-title">
+            <span>MARKET COMPETITION</span>
+            <button type="button" class="xai-toggle tiny" data-target="xai-market" aria-expanded="false">▼</button>
+          </div>
+
+          <div id="xai-market" class="xai-panel">
+            <b>How it’s calculated:</b><br>
+            We match your products against <code>competitors.csv</code> using <code>thermo_product</code> / <code>competitor_product</code>.
+            Then we map <code>comparative_position</code> to a score (Thermo Advantage=0.25, Neutral=0.55, Competitor Advantage=0.85),
+            average across products, and convert to %.
+            <br><br>
+            <b>Why needed:</b> shows how “tough” the deal is and guides discount vs value-add strategy.
+          </div>
+
+          <div class="ins-row">
+            <span class="badge badge-blue">{{ deal.market.ui.competition_label }}</span>
+            <div class="big-number">{{ deal.market.ui.competition_pct }}%</div>
+
+            <div class="small-muted">
+              Win Rate
+              <button type="button" class="xai-toggle tiny" data-target="xai-winrate" aria-expanded="false">▼</button>
+            </div>
+            <div class="winrate">{{ deal.market.ui.win_rate_pct }}%</div>
+          </div>
+
+          <div id="xai-winrate" class="xai-panel compact">
+            <b>How it’s calculated:</b><br>
+            Win Rate is an estimate that goes up when confidence is high and goes down when competition is high.
+            It combines both signals to give a quick “deal health” view.
+            <br><br>
+            <b>Why needed:</b> helps reps decide urgency, priority, and negotiation strategy.
+          </div>
+
+          <div class="quote-note">
+            “Recommended strategy is computed from competitor dataset matches.”
+          </div>
+          <div class="source-note">{{ deal.market.ui.source_note }}</div>
+        </div>
+
+        <!-- Recommendation Confidence Card -->
+        <div class="ins-card">
+          <div class="ins-title">
+            <span>RECOMMENDATION CONFIDENCE</span>
+            <button type="button" class="xai-toggle tiny" data-target="xai-confidence" aria-expanded="false">▼</button>
+          </div>
+
+          <div id="xai-confidence" class="xai-panel">
+            <b>How it’s calculated:</b><br>
+            Confidence depends on dataset coverage: how many entered products were found/matched in <code>competitors.csv</code>.
+            More matches → higher confidence (e.g., 95%).
+            <br><br>
+            <b>Why needed:</b> tells how strongly the insights are backed by dataset evidence.
+          </div>
+
+          <div class="conf-row">
+            <div class="conf-big">{{ deal.market.ui.confidence_pct }}%</div>
+            <span class="badge badge-green">{{ deal.market.ui.confidence_label }}</span>
+          </div>
+
+          <div class="progress">
+            <div class="progress-fill" data-width="{{ deal.market.ui.confidence_pct | default(0) }}"></div>
+          </div>
+        </div>
+
+        <!-- Alternative Strategies Card -->
+        <div class="ins-card">
+          <div class="ins-title">
+            <span>ALTERNATIVE STRATEGIES</span>
+            <button type="button" class="xai-toggle tiny" data-target="xai-alt" aria-expanded="false">▼</button>
+          </div>
+
+          <div id="xai-alt" class="xai-panel">
+            <b>How it’s generated:</b><br>
+            The system uses market competition + deal value + competitor position and asks the AI to suggest practical
+            ways to win without heavy discounting (bundling, training, service plans, pilot/POC).
+            <br><br>
+            <b>Why needed:</b> gives options beyond discounting and protects margins.
+          </div>
+
+          <div class="alt-box">
+            {% for s in deal.insights.alternative_strategies %}
+            <div class="alt-row">
+              <div class="alt-name">{{ s.name }}</div>
+              <div class="alt-impact">{{ s.impact }}</div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="right-col">
+        <div class="advisor-card">
+          <div class="advisor-title">PSYCHOLOGY AI SALES ADVISOR</div>
+
+          {% for action in deal.insights.advisor_actions %}
+          <div class="advisor-item">
+            <div class="check-pill">check_circle</div>
+            <div class="advisor-text">{{ action }}</div>
+          </div>
+          {% endfor %}
+
+          <div class="advisor-sub">
+            <div class="advisor-subtitle">
+              Discount Advice
+              <button type="button" class="xai-toggle tiny" data-target="xai-discount" aria-expanded="false">▼</button>
+            </div>
+
+            <div id="xai-discount" class="xai-panel compact">
+              <b>How it’s generated:</b><br>
+              Discount suggestion is driven mainly by competition level:
+              high competition → limited discount range (ex: 3–7%); low competition → 0%.
+              <br><br>
+              <b>Why needed:</b> prevents unnecessary discounting and protects margins.
+            </div>
+
+            <div class="advisor-subtext">
+              <b>Should discount:</b> {{ deal.insights.discount_advice.should_discount }} <br/>
+              <b>Range:</b> {{ deal.insights.discount_advice.discount_range }} <br/>
+              <b>Reason:</b> {{ deal.insights.discount_advice.reason }}
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JS: progress fill + dropdown toggles -->
+  <script>
+    // Progress bar width (no Jinja inside CSS)
+    document.querySelectorAll(".progress-fill").forEach(el => {
+      const w = Number(el.dataset.width || 0);
+      el.style.width = Math.max(0, Math.min(100, w)) + "%";
+    });
+
+    // Dropdown toggles (accordion-style per section)
+    document.addEventListener("click", (e) => {
+      const btn = e.target.closest(".xai-toggle");
+      if (!btn) return;
+
+      const panel = document.getElementById(btn.dataset.target);
+      if (!panel) return;
+
+      const isOpen = panel.classList.contains("open");
+      panel.classList.toggle("open", !isOpen);
+
+      btn.setAttribute("aria-expanded", String(!isOpen));
+      btn.classList.toggle("rot", !isOpen);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+deal_id,company_id,company_name,product_id,product_names_purchased,profit
+D0001,HC004,MedGenome Labs,"P0001, P0002","Plasmid DNA Purification Kit, Endotoxin-Free Plasmid Kit",197917
+D0002,HC003,SRL Diagnostics,"P0003, P0004","Maxi Plasmid Purification Kit, UV-Vis Spectrophotometer",310333
+D0003,HC004,MedGenome Labs,"P0005, P0006","NanoDrop Spectrophotometer, Triple Quadrupole Mass Spectrometer",728765
+D0004,HC006,Aurobindo Pharma R&D,"P0007, P0008, P0009","Orbitrap Mass Spectrometer, Flow Cytometer, Cell Sorting Flow Cytometer",200745
+D0005,HC005,Thyrocare Technologies,"P0010, P0011","Benchtop Flow Cytometer, Monoclonal Antibody – CD4",161235
+D0006,HC002,Dr. Lal PathLabs,"P0012, P0013, P0014","Monoclonal Antibody – CD8, Polyclonal Antibody – IgG, Polyclonal Antibody – IgM",300342
+D0007,HC005,Thyrocare Technologies,"P0015, P0016, P0017","ELISA Antibody Detection Kit, Western Blot Antibody Kit, Immunofluorescence Antibody Set",811050
+D0008,HC010,GVK Biosciences,"P0018, P0019","PCR Master Mix, qPCR SYBR Green Master Mix",663861
+D0009,HC009,Sun Pharma Research Centre,"P0020, P0021","qPCR Probe Master Mix, DNA Extraction Kit – Blood",571193
+D0010,HC001,Apollo Diagnostics Laboratory,"P0022, P0023, P0024","DNA Extraction Kit – Tissue, RNA Isolation Kit, Total RNA Purification Kit",163797
+D0011,HC002,Dr. Lal PathLabs,"P0025, P0026, P0027","mRNA Isolation Kit, Protein Assay Kit – BCA, Protein Assay Kit – Bradford",833533
+D0012,HC003,SRL Diagnostics,"P0028, P0029","Cell Culture Media – DMEM, Cell Culture Media – RPMI",887389
+D0013,HC004,MedGenome Labs,"P0030, P0031","Fetal Bovine Serum, Antibiotic-Antimycotic Solution",448856
+D0014,HC003,SRL Diagnostics,"P0032, P0033, P0034","Trypsin-EDTA Solution, Cell Viability Assay Kit, Apoptosis Detection Kit",609965
+D0015,HC005,Thyrocare Technologies,"P0035, P0036","Cell Proliferation Assay Kit, CRISPR Cas9 Protein",757522
+D0016,HC002,Dr. Lal PathLabs,"P0037, P0038, P0039","Guide RNA Synthesis Kit, Gene Expression Assay Kit, cDNA Synthesis Kit",267849
+D0017,HC010,GVK Biosciences,"P0040, P0041","Reverse Transcriptase Enzyme, Restriction Enzyme EcoRI",517109
+D0018,HC004,MedGenome Labs,"P0042, P0043, P0044","Restriction Enzyme HindIII, DNA Ligase Enzyme, Protein Ladder",229285
+D0019,HC003,SRL Diagnostics,"P0045, P0046, P0047","DNA Ladder, Agarose Gel Powder, Western Blot Transfer Membrane",410882
+D0020,HC008,Serum Institute of India,"P0048, P0049","Chemiluminescent Substrate, Flow Cytometry Antibody Panel",725306
+D0021,HC001,Apollo Diagnostics Laboratory,"P0050, P0051","Sample Preparation Kit – Proteomics, LC-MS Sample Prep Kit",642565
+D0022,HC001,Apollo Diagnostics Laboratory,"P0052, P0053","Cell Lysis Buffer, Nuclear Extraction Kit",530979
+D0023,HC009,Sun Pharma Research Centre,"P0054, P0055","Protein Purification Resin, His-Tag Purification Kit",178206
+D0024,HC009,Sun Pharma Research Centre,"P0056, P0057","GST-Tag Purification Kit, Magnetic Bead DNA Cleanup Kit",496718
+D0025,HC005,Thyrocare Technologies,"P0058, P0059, P0060","RNA Cleanup Beads, High-Fidelity DNA Polymerase, Hot Start Taq Polymerase",518070
+D0026,HC008,Serum Institute of India,"P0061, P0062, P0063","Digital PCR System, Real-Time PCR Instrument, Automated Nucleic Acid Extractor",846585
+D0027,HC008,Serum Institute of India,"P0064, P0065, P0066","Microplate Reader, ELISA Microplate Reader, Multimode Plate Reader",881921
+D0028,HC008,Serum Institute of India,"P0067, P0068, P0069","Laboratory Centrifuge, High-Speed Refrigerated Centrifuge, Ultracentrifuge System",415683
+D0029,HC003,SRL Diagnostics,"P0070, P0071, P0072","CO2 Cell Culture Incubator, Benchtop Shaking Incubator, Orbital Shaker",528135
+D0030,HC005,Thyrocare Technologies,"P0073, P0074, P0075","Laboratory Water Purification System, Ultra-Pure Water System, Laboratory Freezer -80C",533659
+D0031,HC010,GVK Biosciences,"P0076, P0077","Laboratory Refrigerator, Cryogenic Storage System",207138
+D0032,HC009,Sun Pharma Research Centre,"P0078, P0079","Liquid Nitrogen Dewar, Automated Cell Counter",162428
+D0033,HC007,Biocon Research Labs,"P0080, P0081, P0082","Hemocytometer, Micropipette Set, Electronic Pipette",579665
+D0034,HC004,MedGenome Labs,"P0083, P0084","Filtered Pipette Tips, Serological Pipettes",541332
+D0035,HC003,SRL Diagnostics,"P0085, P0086, P0087","Glass Bottom Culture Dishes, Cell Culture Flasks, Multiwell Culture Plates",196039
+D0036,HC004,MedGenome Labs,"P0088, P0089","Tissue Culture Treated Plates, Disposable Gloves – Nitrile",445160
+D0037,HC001,Apollo Diagnostics Laboratory,"P0090, P0091","Lab Safety Goggles, Laboratory Protective Apparel",727354
+D0038,HC005,Thyrocare Technologies,"P0092, P0093","Chemical Storage Cabinet, Biosafety Cabinet Class II",386962
+D0039,HC002,Dr. Lal PathLabs,"P0094, P0095","Laminar Air Flow Hood, Fume Hood System",466936
+D0040,HC010,GVK Biosciences,"P0096, P0097, P0098","Analytical Balance, Precision Weighing Balance, pH Meter",651375
+D0041,HC009,Sun Pharma Research Centre,"P0099, P0100","Conductivity Meter, Water Bath",216793
+D0042,HC004,MedGenome Labs,"P0101, P0102, P0103","Dry Block Heater, Vortex Mixer, Magnetic Stirrer",434049
+D0043,HC002,Dr. Lal PathLabs,"P0104, P0105","Hot Plate Stirrer, Laboratory Autoclave",782129
+D0044,HC008,Serum Institute of India,"P0106, P0107, P0108","Steam Sterilizer, Biohazard Waste Container, Laboratory Waste Management Kit",163870
+D0045,HC007,Biocon Research Labs,"P0109, P0110","Cold Chain Transport Box, Sample Storage Cryobox",894409

@@ -1,0 +1,798 @@
+NLP Verbal Document � Lab Products
+
+1. Plasmid DNA Purification Kit
+* Description: Rapid and efficient purification of plasmid DNA from bacterial cultures. High-quality DNA suitable for cloning, PCR, and sequencing.
+* Use Case: Molecular biology research, cloning experiments.
+* Key Features: High yield, low endotoxin, easy spin-column protocol.
+* Keywords: plasmid, DNA, purification, molecular biology, cloning, PCR, sequencing
+
+2. Endotoxin-Free Plasmid Kit
+* Description: Purifies plasmid DNA with extremely low endotoxin levels, suitable for sensitive applications like transfection.
+* Use Case: Mammalian cell transfection, gene therapy research.
+* Key Features: Endotoxin-free, high purity, optimized for transfection efficiency.
+* Keywords: plasmid, endotoxin-free, transfection, mammalian cells, DNA, gene therapy
+
+3. Maxi Plasmid Purification Kit
+* Description: High-capacity kit for purifying large amounts of plasmid DNA from bacterial cultures. Highly concentrated DNA for downstream applications.
+* Use Case: Large-scale cloning, plasmid prep for sequencing or transfection.
+* Key Features: High yield, scalable, spin-column or gravity-flow compatible.
+* Keywords: maxi, plasmid, DNA, purification, high yield, cloning, sequencing
+
+4. UV-Vis Spectrophotometer
+* Description: Measures absorbance of nucleic acids, proteins, and other biomolecules across UV and visible spectra.
+* Use Case: DNA, RNA, and protein quantification; quality checks.
+* Key Features: Wide wavelength range, accurate readings, easy-to-use interface.
+* Keywords: UV, visible, spectrophotometer, DNA, RNA, protein, quantification, absorbance
+
+5. NanoDrop Spectrophotometer
+* Description: Compact micro-volume spectrophotometer for rapid and accurate nucleic acid and protein quantification.
+* Use Case: Quick measurement of DNA, RNA, and protein in small volumes.
+* Key Features: Micro-volume, fast, minimal sample consumption, highly accurate.
+* Keywords: NanoDrop, spectrophotometer, DNA, RNA, protein, micro-volume, quantification
+
+6. Triple Quadrupole Mass Spectrometer
+* Description: High-sensitivity mass spectrometer for targeted quantification of metabolites, peptides, and small molecules.
+* Use Case: Analytical chemistry, proteomics, metabolomics, pharmaceutical research.
+* Key Features: Triple quadrupole detection, high sensitivity, precise quantification.
+* Keywords: mass spectrometer, triple quadrupole, metabolites, peptides, quantification, analytical
+
+7. Orbitrap Mass Spectrometer
+
+Description: High-resolution accurate mass spectrometry platform.
+
+Use Case: Protein identification, biomarker discovery.
+
+Key Features: Ultra-high resolution, mass accuracy.
+
+Keywords: orbitrap, high resolution MS
+
+8. Flow Cytometer
+
+Description: Multi-parameter cell analysis instrument using fluorescence detection.
+
+Use Case: Immunophenotyping, cell population analysis.
+
+Key Features: Multi-color capability, high throughput.
+
+Keywords: flow cytometry, cell analysis
+
+9. Cell Sorting Flow Cytometer
+
+Description: Advanced flow cytometer capable of isolating specific cell populations.
+
+Use Case: Stem cell sorting, immune cell separation.
+
+Key Features: High precision sorting, multi-laser configuration.
+
+Keywords: FACS, cell sorting
+
+10. Benchtop Flow Cytometer
+
+Description: Compact cytometer for routine cell analysis.
+
+Use Case: Small lab immunology applications.
+
+Key Features: Space-saving design, user-friendly interface.
+
+Keywords: benchtop cytometer, fluorescence detection
+
+11. Monoclonal Antibody – CD4
+
+Description: High-specificity monoclonal antibody targeting CD4 antigen.
+
+Use Case: T-cell analysis, immunophenotyping.
+
+Key Features: High affinity binding, validated performance.
+
+Keywords: CD4 antibody, monoclonal, T-cell marker
+
+12. Monoclonal Antibody – CD8
+
+Description: Specific monoclonal antibody for CD8 antigen detection.
+
+Use Case: Cytotoxic T-cell studies.
+
+Key Features: High specificity, optimized for flow cytometry.
+
+Keywords: CD8 antibody, immune marker
+
+13. Polyclonal Antibody – IgG
+
+Description: Polyclonal antibody recognizing IgG molecules.
+
+Use Case: Immunoassays, ELISA, western blot.
+
+Key Features: Broad epitope recognition.
+
+Keywords: IgG antibody, polyclonal
+
+14. Polyclonal Antibody – IgM
+
+Description: Antibody designed for IgM detection.
+
+Use Case: Immunodiagnostics.
+
+Key Features: High sensitivity detection.
+
+Keywords: IgM antibody
+
+15. ELISA Antibody Detection Kit
+
+Description: Complete kit for enzyme-linked immunosorbent assay detection of target antigens or antibodies.
+
+Use Case: Immunodiagnostics, protein quantification.
+
+Key Features: High sensitivity, ready-to-use reagents.
+
+Keywords: ELISA, antibody detection, immunoassay
+
+16. Western Blot Antibody Kit
+
+Description: Optimized antibody kit for protein detection via western blot.
+
+Use Case: Protein expression analysis.
+
+Key Features: High specificity, low background.
+
+Keywords: western blot, protein detection
+
+17. Immunofluorescence Antibody Set
+
+Description: Fluorescently labeled antibodies for cellular imaging applications.
+
+Use Case: Microscopy, cellular localization studies.
+
+Key Features: Bright fluorescence, high specificity.
+
+Keywords: immunofluorescence, fluorescence imaging
+
+18. PCR Master Mix
+
+Description: Ready-to-use master mix for conventional PCR amplification.
+
+Use Case: DNA amplification, cloning validation.
+
+Key Features: Optimized buffer, high amplification efficiency.
+
+Keywords: PCR, DNA amplification
+
+19. qPCR SYBR Green Master Mix
+
+Description: Real-time PCR master mix with SYBR Green dye for DNA quantification.
+
+Use Case: Gene expression analysis.
+
+Key Features: High sensitivity, accurate quantification.
+
+Keywords: qPCR, SYBR Green, real-time PCR
+
+20. qPCR Probe Master Mix
+
+Description: Probe-based qPCR master mix for highly specific quantification.
+
+Use Case: Diagnostic and research applications.
+
+Key Features: High specificity, multiplex compatibility.
+
+Keywords: probe qPCR, TaqMan
+
+21. DNA Extraction Kit – Blood
+
+Description: Rapid genomic DNA extraction from blood samples.
+
+Use Case: Clinical research, genetic testing.
+
+Key Features: High purity DNA, simple protocol.
+
+Keywords: DNA extraction, blood samples
+
+22. DNA Extraction Kit – Tissue
+
+Description: Genomic DNA isolation from tissue samples.
+
+Use Case: Molecular diagnostics.
+
+Key Features: High yield, inhibitor removal.
+
+Keywords: tissue DNA extraction
+
+23. RNA Isolation Kit
+
+Description: Isolation of total RNA from cells and tissues.
+
+Use Case: Transcriptomics, RT-PCR.
+
+Key Features: DNA-free RNA, high integrity.
+
+Keywords: RNA extraction
+
+24. Total RNA Purification Kit
+
+Description: High-quality total RNA purification system.
+
+Use Case: RNA sequencing, qPCR.
+
+Key Features: Minimal degradation.
+
+Keywords: total RNA, purification
+
+25. mRNA Isolation Kit
+
+Description: Selective isolation of messenger RNA.
+
+Use Case: Gene expression profiling.
+
+Key Features: Poly-A selection method.
+
+Keywords: mRNA isolation
+
+26. Protein Assay Kit – BCA
+
+Description: Colorimetric protein quantification using BCA method.
+
+Use Case: Protein concentration measurement.
+
+Key Features: High compatibility with detergents.
+
+Keywords: BCA assay, protein quantification
+
+27. Protein Assay Kit – Bradford
+
+Description: Rapid protein estimation using Bradford reagent.
+
+Use Case: Routine protein measurement.
+
+Key Features: Quick results, simple protocol.
+
+Keywords: Bradford assay
+
+28. Cell Culture Media – DMEM
+
+Description: Nutrient-rich medium for mammalian cell culture.
+
+Use Case: Cell growth and maintenance.
+
+Key Features: High glucose formulation available.
+
+Keywords: DMEM, cell culture
+
+29. Cell Culture Media – RPMI
+
+Description: RPMI 1640 medium for lymphocyte and hybridoma culture.
+
+Use Case: Immune cell culture.
+
+Key Features: Balanced nutrient composition.
+
+Keywords: RPMI, cell culture media
+
+30. Fetal Bovine Serum
+
+Description: Premium serum supplement for cell culture.
+
+Use Case: Cell growth support.
+
+Key Features: Low endotoxin, sterile filtered.
+
+Keywords: FBS, serum supplement
+
+31. Antibiotic-Antimycotic Solution
+
+Description: Prevents bacterial and fungal contamination.
+
+Use Case: Cell culture maintenance.
+
+Key Features: Broad-spectrum protection.
+
+Keywords: antibiotic solution
+
+32. Trypsin-EDTA Solution
+
+Description: Enzymatic dissociation reagent used to detach adherent mammalian cells from culture vessels by breaking cell adhesion proteins.
+
+Use Case: Routine cell passaging, subculturing, and harvesting adherent cells.
+
+Key Features: Gentle and efficient dissociation, optimized EDTA concentration, sterile-filtered.
+
+Keywords: trypsin, EDTA, cell detachment, cell passaging, adherent cells
+
+33. Cell Viability Assay Kit
+
+Description: Assay kit for quantitative measurement of live and dead cells using colorimetric or fluorescent indicators.
+
+Use Case: Cytotoxicity testing, drug screening, cell health monitoring.
+
+Key Features: High sensitivity, fast readout, compatible with microplate readers.
+
+Keywords: viability assay, live dead cells, cytotoxicity, cell health
+
+34. Apoptosis Detection Kit
+
+Description: Detects early and late apoptotic markers such as Annexin V binding and caspase activation.
+
+Use Case: Cancer research, drug-induced apoptosis studies.
+
+Key Features: Flow cytometry compatible, sensitive detection, easy protocol.
+
+Keywords: apoptosis, annexin V, caspase, programmed cell death
+
+35. Cell Proliferation Assay Kit
+
+Description: Measures cell growth rate using metabolic or DNA synthesis indicators.
+
+Use Case: Cell growth studies, anti-cancer drug testing.
+
+Key Features: Quantitative results, high reproducibility, multiple detection formats.
+
+Keywords: proliferation assay, cell growth, BrdU, metabolic assay
+
+36. CRISPR Cas9 Protein
+
+Description: Recombinant Cas9 nuclease for precise genome editing applications.
+
+Use Case: Gene knockout, gene insertion, genome modification.
+
+Key Features: High cutting efficiency, nuclease-active, research-grade purity.
+
+Keywords: CRISPR, Cas9, gene editing, genome engineering
+
+37. Guide RNA Synthesis Kit
+
+Description: Kit for in vitro synthesis of guide RNA (gRNA) used in CRISPR gene editing.
+
+Use Case: Custom genome targeting experiments.
+
+Key Features: High transcription yield, optimized reagents, easy workflow.
+
+Keywords: gRNA, CRISPR, guide RNA, gene targeting
+
+38. Gene Expression Assay Kit
+
+Description: Quantitative detection of mRNA expression levels in biological samples.
+
+Use Case: Gene regulation studies, disease biomarker analysis.
+
+Key Features: High specificity, qPCR compatible, validated primers.
+
+Keywords: gene expression, mRNA quantification, qPCR assay
+
+39. cDNA Synthesis Kit
+
+Description: Converts purified RNA into complementary DNA (cDNA) for downstream PCR analysis.
+
+Use Case: RT-PCR, gene expression analysis.
+
+Key Features: High conversion efficiency, optimized buffers, RNase-free components.
+
+Keywords: cDNA, reverse transcription, RNA to DNA
+
+40. Reverse Transcriptase Enzyme
+
+Description: Enzyme that synthesizes complementary DNA from RNA template.
+
+Use Case: RT-PCR, viral RNA detection.
+
+Key Features: High thermal stability, high fidelity, strong processivity.
+
+Keywords: reverse transcriptase, RT enzyme, cDNA synthesis
+
+41. Restriction Enzyme EcoRI
+
+Description: Sequence-specific endonuclease that cleaves DNA at GAATTC sites.
+
+Use Case: Molecular cloning, DNA digestion.
+
+Key Features: High activity, reliable cleavage, optimized buffer compatibility.
+
+Keywords: EcoRI, restriction enzyme, DNA digestion
+
+42. Restriction Enzyme HindIII
+
+Description: Endonuclease that cuts DNA at AAGCTT recognition sites.
+
+Use Case: DNA mapping and cloning experiments.
+
+Key Features: High specificity, consistent performance.
+
+Keywords: HindIII, restriction enzyme, DNA cleavage
+
+43. DNA Ligase Enzyme
+
+Description: Catalyzes joining of DNA fragments by forming phosphodiester bonds.
+
+Use Case: DNA cloning, vector construction.
+
+Key Features: High ligation efficiency, optimized buffer system.
+
+Keywords: DNA ligase, ligation, cloning
+
+44. Protein Ladder
+
+Description: Pre-stained molecular weight marker for protein electrophoresis.
+
+Use Case: SDS-PAGE size estimation.
+
+Key Features: Broad size range, sharp bands.
+
+Keywords: protein marker, molecular weight ladder
+
+45. DNA Ladder
+
+Description: DNA fragment mixture used as size reference in agarose gel electrophoresis.
+
+Use Case: DNA fragment size determination.
+
+Key Features: Clear band separation, wide range.
+
+Keywords: DNA ladder, DNA marker, gel electrophoresis
+
+46. Agarose Gel Powder
+
+Description: High-quality agarose for nucleic acid separation in gel electrophoresis.
+
+Use Case: DNA/RNA separation.
+
+Key Features: Low EEO, high gel strength.
+
+Keywords: agarose, gel electrophoresis
+
+47. Western Blot Transfer Membrane
+
+Description: Membrane used for transferring proteins from gel for antibody detection.
+
+Use Case: Western blot analysis.
+
+Key Features: High protein binding capacity, low background.
+
+Keywords: blot membrane, PVDF, nitrocellulose
+
+48. Chemiluminescent Substrate
+
+Description: HRP-based detection reagent producing light signal for Western blot.
+
+Use Case: Protein detection assays.
+
+Key Features: High sensitivity, low background noise.
+
+Keywords: ECL substrate, chemiluminescence
+
+49. Flow Cytometry Antibody Panel
+
+Description: Multiplex antibody set for simultaneous detection of multiple cell markers.
+
+Use Case: Immunophenotyping.
+
+Key Features: Fluorophore conjugated, optimized panel design.
+
+Keywords: antibody panel, flow cytometry
+
+50. Sample Preparation Kit – Proteomics
+
+Description: Protein extraction and cleanup kit for mass spectrometry analysis.
+
+Use Case: Proteomic profiling.
+
+Key Features: High protein recovery, MS compatible.
+
+Keywords: proteomics prep, protein extraction
+
+51. LC-MS Sample Prep Kit
+
+Description: Cleanup and preparation kit for LC-MS workflows ensuring removal of contaminants.
+
+Use Case: Pharmaceutical and proteomics analysis.
+
+Key Features: High recovery rate, MS-compatible solvents.
+
+Keywords: LC-MS prep, sample cleanup
+
+52. Cell Lysis Buffer
+
+Description: Buffer solution for breaking open cells to release proteins and nucleic acids.
+
+Use Case: Protein extraction.
+
+Key Features: Protease inhibitor compatible, efficient lysis.
+
+Keywords: lysis buffer, protein extraction
+
+53. Nuclear Extraction Kit
+
+Description: Isolates nuclear proteins from cytoplasmic fractions.
+
+Use Case: Transcription factor analysis.
+
+Key Features: High purity nuclear fraction.
+
+Keywords: nuclear protein, extraction kit
+
+54. Protein Purification Resin
+
+Description: Affinity chromatography resin for selective protein purification.
+
+Use Case: Recombinant protein purification.
+
+Key Features: High binding capacity.
+
+Keywords: affinity resin, chromatography
+
+55. His-Tag Purification Kit
+
+Description: Nickel-based affinity purification for His-tagged proteins.
+
+Use Case: Recombinant protein isolation.
+
+Key Features: High specificity, easy elution.
+
+Keywords: His tag, Ni-NTA
+
+56. GST-Tag Purification Kit
+
+Description: Glutathione affinity system for GST-tagged protein purification.
+
+Use Case: Fusion protein purification.
+
+Key Features: High selectivity.
+
+Keywords: GST purification
+
+57. Magnetic Bead DNA Cleanup Kit
+
+Description: Magnetic bead-based purification of DNA fragments.
+
+Use Case: PCR cleanup.
+
+Key Features: Fast and scalable.
+
+Keywords: DNA cleanup, magnetic beads
+
+58. RNA Cleanup Beads
+
+Description: Magnetic bead system for purifying RNA samples.
+
+Use Case: RNA sequencing prep.
+
+Key Features: High recovery, RNase-free.
+
+Keywords: RNA purification
+
+59. High-Fidelity DNA Polymerase
+
+Description: Proofreading enzyme for accurate DNA amplification.
+
+Use Case: Cloning, mutagenesis.
+
+Key Features: Low error rate.
+
+Keywords: high fidelity PCR
+
+60. Hot Start Taq Polymerase
+
+Description: Heat-activated polymerase minimizing non-specific amplification.
+
+Use Case: PCR diagnostics.
+
+Key Features: Improved specificity.
+
+Keywords: hot start PCR
+
+61. Digital PCR System
+
+Description: Platform for absolute quantification of nucleic acids using partition-based PCR technology.
+
+Use Case: Rare mutation detection, copy number variation analysis.
+
+Key Features: High precision, sensitive detection.
+
+Keywords: dPCR, absolute quantification
+
+62. Real-Time PCR Instrument
+
+Description: Quantitative PCR system for real-time monitoring of DNA amplification.
+
+Use Case: Gene expression and diagnostics.
+
+Key Features: Multiplex detection, thermal uniformity.
+
+Keywords: qPCR machine
+
+63. Automated Nucleic Acid Extractor
+
+Description: Automated platform for high-throughput DNA/RNA isolation.
+
+Use Case: Clinical labs, research labs.
+
+Key Features: Reduced manual handling.
+
+Keywords: automated extraction
+
+64–66. Microplate Readers
+
+Description: Detection systems measuring absorbance, fluorescence, or luminescence in microplates.
+
+Use Case: ELISA, enzyme assays.
+
+Key Features: Multi-mode detection, high throughput.
+
+Keywords: plate reader, ELISA reader
+
+67–69. Centrifuge Systems
+
+Description: High-speed centrifuges for sample separation by density.
+
+Use Case: Blood separation, molecular prep.
+
+Key Features: Variable speed control, refrigerated options.
+
+Keywords: centrifuge
+
+70–72. Incubators & Shakers
+
+Description: Controlled environment systems for cell growth and microbial culture.
+
+Use Case: Cell culture, bacterial growth.
+
+Key Features: Temperature & CO₂ control.
+
+Keywords: incubator, shaker
+
+73–75. Water Systems & -80°C Freezer
+
+Description: Lab water purification systems and ultra-low temperature freezers for sample storage.
+
+Use Case: Molecular biology labs.
+
+Key Features: Ultra-pure water, stable cooling.
+
+Keywords: ultra pure water, freezer
+
+76–77. Laboratory Refrigerator & Cryogenic Storage System
+
+Description: Cold storage units for reagents and long-term cryopreservation.
+
+Use Case: Vaccine and sample storage.
+
+Key Features: Temperature stability.
+
+Keywords: cold storage, cryostorage
+
+78–79. Liquid Nitrogen Dewar & Automated Cell Counter
+
+Description: Cryogenic storage vessel and cell counting instrument.
+
+Use Case: Stem cell storage, cell viability analysis.
+
+Key Features: Safe storage, accurate counting.
+
+Keywords: cryostorage, cell counting
+
+80–82. Pipetting & Counting Tools
+
+Description: Manual and electronic pipettes and hemocytometers for precise liquid handling.
+
+Use Case: Routine lab measurements.
+
+Key Features: Ergonomic design, accuracy.
+
+Keywords: pipette, hemocytometer
+
+83–84. Pipette Consumables
+
+Description: Sterile filtered tips and serological pipettes for liquid transfer.
+
+Use Case: Cell culture and molecular work.
+
+Key Features: RNase/DNase-free.
+
+Keywords: tips, serological pipettes
+
+85–87. Cell Culture Plastics
+
+Description: Tissue culture-treated plates, flasks, and dishes.
+
+Use Case: Mammalian cell culture.
+
+Key Features: Sterile, treated surface.
+
+Keywords: culture plates, flasks
+
+88–89. Cell Culture Plates & Nitrile Gloves
+
+Description: Sterile culture ware and protective gloves.
+
+Use Case: Safe laboratory handling.
+
+Key Features: Powder-free gloves.
+
+Keywords: tissue culture, nitrile gloves
+
+90–91. Safety Goggles & Lab Coat
+
+Description: Personal protective equipment for laboratory safety.
+
+Use Case: Chemical and biological safety.
+
+Key Features: Chemical resistant material.
+
+Keywords: goggles, lab coat
+
+92–93. Storage Cabinet & Biosafety Cabinet
+
+Description: Safe storage and Class II biosafety cabinet for sterile work.
+
+Use Case: Pathogen handling.
+
+Key Features: HEPA filtration.
+
+Keywords: biosafety cabinet
+
+94–95. Laminar Flow Hood & Fume Hood
+
+Description: Airflow systems for contamination-free or chemical-safe environments.
+
+Use Case: Cell culture and chemical handling.
+
+Key Features: Airflow control.
+
+Keywords: laminar flow, fume hood
+
+96–98. Analytical Balance & pH Meter
+
+Description: Precision weighing scale and pH measurement device.
+
+Use Case: Buffer preparation.
+
+Key Features: High accuracy.
+
+Keywords: analytical balance, pH
+
+99–100. Conductivity Meter & Water Bath
+
+Description: Measures solution conductivity and controlled heating bath.
+
+Use Case: Buffer prep and incubation.
+
+Key Features: Digital display.
+
+Keywords: conductivity, water bath
+
+101–103. Vortex Mixer, Magnetic Stirrer, Orbital Shaker
+
+Description: Mixing devices for uniform sample preparation.
+
+Use Case: Reagent mixing.
+
+Key Features: Variable speed.
+
+Keywords: vortex, stirrer
+
+104–105. Autoclave & Hot Plate
+
+Description: Steam sterilizer and heating plate for lab sterilization and heating.
+
+Use Case: Sterilization of media and tools.
+
+Key Features: High temperature resistance.
+
+Keywords: sterilization, hot plate
+
+106–108. UV Sterilizer & Biohazard Waste Disposal System
+
+Description: UV-based sterilization unit and regulated waste management system.
+
+Use Case: Decontamination and waste control.
+
+Key Features: Safety compliant.
+
+Keywords: biohazard waste, sterilizer
+
+109–110. Cold Chain Transport Box & Cryobox
+
+Description: Insulated transport containers and cryogenic storage boxes for sample preservation.
+
+Use Case: Sample transportation and storage.
+
+Key Features: Temperature stability, durable material.
+
+Keywords: sample transport, cryostorage
+
